@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/FAVICON.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>To-Do-List</title>
+</head>
+
+<body>
+    <div class="p-10">
+        <h1 class="text-white text-2xl font-bold text-center pt-12 pb-12 ">TO DO LIST 📋✅</h1>
+        <div class=" grid justify-center align-center">
+
+            <div class="flex mb-6">
+                <input id="tarefa-input" type="text" placeholder="Nova tarefa..." autocomplete="off" class="input input-bordered input-info w-full max-w-xs ">
+                <button type="submit" id="botao-adicionar" onclick="adicionarTarefa()" autofocus class="btn btn-info text-white ml-4"><span class="text-3xl md:hidden">+</span><span class="text-lg hidden md:block">Adicionar</span></button>
+            </div>
+            <ul id="lista-tarefas">
+                <button id="botao_excluir"></button>
+            </ul>
+            <button id="removerConcluidas" class="btn  text-white text-base bg-green-600 mb-4 hover:bg-green-500 md:text-xl ">REMOVER CONCLUÍDAS</button>
+            <button id="limparLista" class="btn btn-dash btn-info text-white text-base md:text-xl">LIMPAR LISTA</button>
+
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
