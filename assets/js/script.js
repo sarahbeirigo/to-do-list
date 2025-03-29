@@ -80,7 +80,7 @@ function carregarTarefas() {
         });
 
         const img = document.createElement('img');
-        img.src = "./src/img/trash.png";
+        img.src = "../images/trash.png";
         img.alt = "excluir tarefa"
         botao_excluir.appendChild(img);
 
@@ -120,7 +120,7 @@ function removerConcluidas() {
 
     // Salva o array atualizado (somente as tarefas ativas) de volta no localStorage
     localStorage.setItem("tarefas", JSON.stringify(tarefas));
-    
+
     carregarTarefas();
 }
 
