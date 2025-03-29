@@ -101,3 +101,10 @@ function adicionarTarefa() {
 }
 
 
+//adcionar nova tarefa ao clicar em "Enter" após a tarefa ser digitada
+input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        adicionarTarefa();
+    }
+});
+
