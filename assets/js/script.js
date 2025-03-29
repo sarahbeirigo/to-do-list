@@ -96,4 +96,8 @@ function carregarTarefas() {
 }
 
 
+function adicionarTarefa() {
+    salvarTarefaLocalStorage();
+}
+
 
