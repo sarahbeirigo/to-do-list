@@ -12,4 +12,21 @@ body {
   height: 100vh;
 }
 
+ul,
+li {
+  list-style: none;
+}
 
+img {
+  width: 24px;
+  height: 24;
+  object-fit: contain;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+
+img:hover{
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
