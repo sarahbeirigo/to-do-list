@@ -120,9 +120,16 @@ function removerConcluidas() {
 
     // Salva o array atualizado (somente as tarefas ativas) de volta no localStorage
     localStorage.setItem("tarefas", JSON.stringify(tarefas));
-
-    // Atualiza a lista na tela
+    
     carregarTarefas();
 }
+
 document.getElementById("removerConcluidas").addEventListener("click", removerConcluidas);
 
+//Botao limpar lista
+function limparLista() {
+    const lista_tarefas = document.getElementById("lista-tarefas");
+    lista_tarefas.innerHTML = ""; //limpa elemetos da lista na tela
+    localStorage.removeItem("tarefas");//remove intens do localStorage
+}
+document.getElementById("limparLista").addEventListener("click", limparLista);
