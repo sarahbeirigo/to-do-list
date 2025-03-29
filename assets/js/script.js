@@ -108,3 +108,21 @@ input.addEventListener("keydown", (event) => {
     }
 });
 
+
+//Botao remover tarefas concluidas
+function removerConcluidas() {
+
+    // Recupera o array de tarefas do localStorage
+    let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+    // Filtra as tarefas concluídas criando um novo array com elas
+    tarefas = tarefas.filter(tarefa => tarefa.status !== 'c');
+
+    // Salva o array atualizado (somente as tarefas ativas) de volta no localStorage
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+
+    // Atualiza a lista na tela
+    carregarTarefas();
+}
+document.getElementById("removerConcluidas").addEventListener("click", removerConcluidas);
+
