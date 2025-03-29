@@ -80,7 +80,7 @@ function carregarTarefas() {
         });
 
         const img = document.createElement('img');
-        img.src = "../images/trash.png";
+        img.src = "/assets/images/trash.png";
         img.alt = "excluir tarefa"
         botao_excluir.appendChild(img);
 
@@ -102,6 +102,7 @@ function adicionarTarefa() {
 
 
 //adcionar nova tarefa ao clicar em "Enter" após a tarefa ser digitada
+const input = document.getElementById("tarefa-input");
 input.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         adicionarTarefa();
@@ -123,7 +124,6 @@ function removerConcluidas() {
 
     carregarTarefas();
 }
-
 document.getElementById("removerConcluidas").addEventListener("click", removerConcluidas);
 
 //Botao limpar lista
